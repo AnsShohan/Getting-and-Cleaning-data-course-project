@@ -46,7 +46,7 @@ names(tidy_data) <- gsub("angle", "Angle", names(tidy_data))
 ### Creating a second independent data set with 
 
 final_data <- tidy_data %>% group_by(activity, subject) %>% summarise_all(funs(mean))
-write.table(final_data, "FinalData.txt")
+write.table(final_data, "FinalData.txt", row.name = FALSE)
 
 
 
